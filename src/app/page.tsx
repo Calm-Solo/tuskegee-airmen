@@ -19,23 +19,6 @@ export default function Home() {
       {/* Main content - your existing content */}
       <div className="grid grid-rows-[auto_1fr_auto] items-center min-h-screen p-8 pb-20 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-transparent text-gray-800">
         <header className="w-full flex flex-col items-center sm:items-start gap-4">
-          {/* Navigation Menu */}
-          <nav className="w-full flex justify-center sm:justify-end mb-4">
-            <ul className="flex gap-6 text-base font-semibold">
-              <li>
-                <Link href="/" className="text-red-800 hover:underline">Home</Link>
-              </li>
-              <li>
-                <Link href="/gallery" className="text-blue-800 hover:underline">Photo Gallery</Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-blue-800 hover:underline">About Us</Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-blue-800 hover:underline">Contact</Link>
-              </li>
-            </ul>
-          </nav>
           <div className="flex items-center gap-4">
             <Image
               src="/images/patch_1.jpg"
