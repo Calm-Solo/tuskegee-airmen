@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +28,30 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Tuskegee Airmen Themed Background */}
+        <div className="fixed inset-0 -z-10">
+          <div className="absolute inset-0 bg-amber-50 opacity-90"></div>
+          <div className="absolute inset-0 bg-[url('/images/paper-texture.png')] opacity-20"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+          <div className="absolute top-0 right-0 w-24 h-full bg-red-700 opacity-5"></div>
+        </div>
+        {/* Navigation Menu */}
+        <nav className="w-full flex justify-center sm:justify-end py-4 bg-white/80 backdrop-blur sticky top-0 z-40 shadow">
+          <ul className="flex gap-6 text-base font-semibold">
+            <li>
+              <Link href="/" className="text-red-800 hover:underline">Home</Link>
+            </li>
+            <li>
+              <Link href="/gallery" className="text-blue-800 hover:underline">Photo Gallery</Link>
+            </li>
+            <li>
+              <Link href="/about" className="text-blue-800 hover:underline">About Us</Link>
+            </li>
+            <li>
+              <Link href="/contact" className="text-blue-800 hover:underline">Contact</Link>
+            </li>
+          </ul>
+        </nav>
         {children}
       </body>
     </html>
