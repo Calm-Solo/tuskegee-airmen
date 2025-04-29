@@ -61,7 +61,7 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
               <h3 className="text-white text-2xl sm:text-4xl font-bold text-center px-4">
-                Honoring the Legacy of America's First Black Military Aviators
+                Honoring the Legacy of America&apos;s First Black Military Aviators
               </h3>
             </div>
           </section>
